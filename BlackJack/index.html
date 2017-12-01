@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="blackjack.css">
+</head>
+
+<body>
+  <title> "Black Jack"
+  </title>
+  <label class="score" for="win">Win:</label> &nbsp; <label id="win" > 0 </label>
+ &nbsp;
+ <label class="score" for="loss">Loss:</label> &nbsp; <label id="loss"> 0 </label>
+<p>
+    <button type="button" class=button hidden=true onclick="reset(); " id="deal">Deal</button>
+  <button type="button" class= button onclick="hit();" id="hit">Hit</button>
+  <button type="button" class= button onclick="stand();" id="stand">Stand</button>
+</p>
+  <p>
+    <p><input type="hidden" id="inputDeck" value="" />
+      <input type="hidden" id="cpuHand" value="" />
+      <input type="hidden" id="playerHand" value="" />
+    </p>
+    <p>
+            <label id="YouWin"> You win!</label>
+
+                <label  id="Bust"> Bust!</label>
+                <label  id="cpuBust"> CPU bust!</label>
+
+            <label id="CPUwin">CPU win!</label>
+          </p>
+    <div class="gameBoard">        
+    <table id="hands">
+      <tbody>
+        
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+ 
+        </tr>
+      </tbody>  
+      <script src="BlackJack.js"></script>
+    </table>
+    </div>
+  </p>
+</body>
+
+</html>

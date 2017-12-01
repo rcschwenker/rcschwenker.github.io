@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.3/seedrandom.min.js">
+  </script>
+  <!--back end files exist-->
+  <script src="main.js">
+    //don't forget to link your javascript!
+  </script>
+  <style type="text/css" src="main.css">
+
+  </style>
+</head>
+
+<body>
+  <title> "Slot Machine"
+  </title>
+  <p>
+    $$Monies$$: &nbsp; <label id="bank"> 375 </label> &nbsp;
+  </p>
+  <p>
+    &nbsp;
+    <button type="button" onclick="pullSlot();" id="lever">Pull Slot!</button>
+
+  </p>
+  <p>
+    <div class="table-responsive">
+      <table class="table" id="slotMachine">
+        <tbody>
+          <tr >
+            <td> </td>
+            <td> </td>
+            <td> </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <img src="./kek.jpg" hidden=true id="kek"/>
+      </p>
+      <p>
+        <img src="./jackpot.gif" hidden=true id="jackpot"/>
+      </p>
+    </div>
+
+</body>
+
+</html>

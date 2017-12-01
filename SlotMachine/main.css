@@ -1,0 +1,16 @@
+/*.table-responsive {
+  overflow-x: auto;
+} */
+
+.row {
+  border: 1px solid black;
+}
+
+.table {
+  width: 50%;
+}
+
+img {
+  width: 50px;
+  
+}

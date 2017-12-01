@@ -1,0 +1,31 @@
+table {font-size: 35px;
+    font-weight: bold;
+    color: white;
+    font-family: sans-serif;} 
+
+label {display: inline-block; font-size:30px; font-family:courier new;}
+
+label.score {font-size:24px; font-family:courier new;}
+
+button {font-size:25px;
+  border-radius: 12px;
+  font-family: courier new, monospace;
+  color: #000000;
+  font-size: 20px;
+  background: #D6D1D1;
+  padding: 10px 20px 10px 20px;
+  border: solid #000000 2px;}
+
+
+td:nth-child(6){min-width:200px;} 
+
+td {max-width:100px;}
+
+img {max-width:150px;}
+
+div.gameBoard {border: 4px solid;
+    border-radius: 20px;
+    background-color: #008000;
+    margin-top: 5px;
+    margin-bottom: 5px;}
+#YouWin,#cpuBust,#CPUwin,#Bust{visibility:hidden; width:0px;}
