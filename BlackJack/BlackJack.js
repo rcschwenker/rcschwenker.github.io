@@ -37,17 +37,17 @@ function shuffle(array) { //fisher-yates shuffle
 
 //syntax for JSONobjectconsole.looping
 
-//deck is utilized above as shuffle(result)
+//deck is utilized above as shuffle(buildDeck())
 //two cards will be dealt at the start:
 //row[0]cells[0]; row[0]cells[1];row[1]cells[0];row[1]cells[1]
 
 function deal(deck) {
 
-  var face = ''; //empty strings stored like this ''
+  var face = ''; //empty string ''
   var suit = '';
   var table = document.getElementById("hands");
   var inputDeck = document.getElementById("inputDeck"); //hidden html element
-  var playerHand = [] //empty arrays stored like this []
+  var playerHand = [] //empty arrays[]
   var cpuHand = []
   var button = document.getElementById("hit");
   button.hidden = false;
@@ -61,27 +61,28 @@ function deal(deck) {
   img.style.visibility = "hidden";
   var img = document.getElementById("cpuBust");
   img.style.visibility = "hidden";
-//create a function to hide all of these images?
+
+//The following deals two cards to the CPU, with the first card being face down
 
   for (i = 0; i < 2; i++) {
     face = deck[0][0];
     suit = deck[0][1];
     if (i == 0) {
-      table.rows[0].cells[i].innerHTML = '<img src=./Cards/back.jpg>';
+      table.rows[0].cells[i].innerHTML = '<img src=./Cards/back.jpg>'; //sets first row and cell inner html (i.e. players first card)=img of back of card 
     } else {
-      table.rows[0].cells[i].innerHTML = '<img src=./Cards/' + face + "_of_" + suit + '.svg>';
+      table.rows[0].cells[i].innerHTML = '<img src=./Cards/' + face + "_of_" + suit + '.svg>';//for all over instances sets it equal to selected card
     }
-    deck.shift(); //removes drawn card from deck
-    cpuHand.push([face, suit]); 
+    deck.shift(); //removes element from array 'deck' i.e. removes 'drawn' card from deck
+    cpuHand.push([face, suit]); //adds element (face, suit) to end of array (cpuHand) i.e. adds drawn card to cpuHand
   }
 
 
   for (i = 0; i < 2; i++) { //looping through table
     face = deck[0][0]; //2 elements in each array, first element is always face [0][0], second is suit [0][1]
-    suit = deck[0][1]; //since we are always shifting
+    suit = deck[0][1]; 
     table.rows[1].cells[i].innerHTML = '<img src=./Cards/' + face + "_of_" + suit + '.svg>';
-    deck.shift(); //removes cards from deck array that have been dealt
-    playerHand.push([face, suit]); //moves card to end of playerHand, like a list
+    deck.shift(); 
+    playerHand.push([face, suit]); 
   }
 
   inputDeck.value = JSON.stringify(deck);
