@@ -354,9 +354,6 @@ function compare() {
   showScore();
 
   
- 
-
-  
 
   if (playerScore > cpuScore) {
     win();

@@ -27,7 +27,7 @@ function choice() { //naming function allows us to call on it, meaning it will o
 
 function myLoop(q) { //  create a loop function
   //for (q = 0; q < 5; q++) **Replaced below with a manual loop**
-  var row = document.getElementById("slotMachine").rows[0]; //linking html table, saving it as a variable that we call on
+  var row = document.getElementById("slotMachine").rows[0]; 
   var array = [];
   setTimeout(function() {
     for (i = 0; i < 3; i++) {
@@ -43,7 +43,7 @@ function myLoop(q) { //  create a loop function
       myLoop(q);
     }
     if (q == 6) {
-      console.log("q==6");
+
 
       evaluate(array);
     }
@@ -77,9 +77,9 @@ function evaluate(array) { //open curly bracket, no semicolon (semicolon for com
   {
     win(array[0]);
   } else {
-    console.log("biiiiitch");
+    
   }
-  console.log(array);
+  
   var button = document.getElementById("lever");
   button.hidden = false;
 
@@ -89,9 +89,9 @@ function evaluate(array) { //open curly bracket, no semicolon (semicolon for com
   } else if (array[1] == array[2] && array.length > 0) {
     partialWin(array[1]);
   } else {
-    console.log("biiiiitch");
+    
   }
-  console.log(array);
+  
   var button = document.getElementById("lever");
   button.hidden = false;
 }
